@@ -2108,6 +2108,9 @@ public final class NotificationPanelViewController implements Dumpable {
                 }
             }
         });
+        if (!mScrimController.isScreenOn()) {
+            animator.setDuration(0);
+        }
         setAnimator(animator);
         animator.start();
     }

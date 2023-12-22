@@ -300,10 +300,6 @@ public class PixelPropsUtils {
                 setPropValue("FINGERPRINT", Build.VERSION.INCREMENTAL);
             }
         } else {
-
-            if (!SystemProperties.getBoolean(SPOOF_PIXEL_GAMES, false))
-                return;
-
             if (Arrays.asList(packagesToChangeROG6).contains(packageName)) {
                 if (DEBUG) Log.d(TAG, "Defining props for: " + packageName);
                 for (Map.Entry<String, Object> prop : propsToChangeROG6.entrySet()) {
